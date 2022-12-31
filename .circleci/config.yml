@@ -10,10 +10,10 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            docker build -t udagram-api-feed:latest -f udagram-api-feed .
-            docker build -t udagram-api-user:latest -f udagram-api-user .
-            docker build -t reverseproxy:latest -f reverseproxy .
-            docker build -t udagram-frontend:latest -f udagram-frontend .
+            docker build -t udagram-api-feed:latest -f udagram-api-feed/Dockerfile .
+            docker build -t udagram-api-user:latest -f udagram-api-user/Dockerfile .
+            docker build -t reverseproxy:latest -f reverseproxy/Dockerfile .
+            docker build -t udagram-frontend:latest -f udagram-frontend/Dockerfile .
       - run:
           name: Push Docker image
           command: |
