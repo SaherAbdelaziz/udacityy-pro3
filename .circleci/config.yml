@@ -25,4 +25,4 @@ jobs:
             docker push saherabdelaziz/udagram-api-feed
             docker push saherabdelaziz/udagram-api-user
             docker push saherabdelaziz/udagram-reverseproxy
-            docker push "saherabdelaziz/udagram-frontend
+            docker push saherabdelaziz/udagram-frontend
