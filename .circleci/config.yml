@@ -21,8 +21,8 @@ jobs:
       - run:
           name: Push Docker image
           command: |
-            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-            docker push "$DOCKER_USERNAME"/udagram-api-feed
-            docker push "$DOCKER_USERNAME"/udagram-api-user
-            docker push "$DOCKER_USERNAME"/reverseproxy
-            docker push "$DOCKER_USERNAME"/udagram-frontend
+            docker login -u saherabdelaziz -p dckr_pat_SGktnY3yam10V501NWLaTSS2LXY
+            docker push "saherabdelaziz/udagram-api-feed
+            docker push "saherabdelaziz/udagram-api-user
+            docker push "saherabdelaziz/reverseproxy
+            docker push "saherabdelaziz/udagram-frontend
