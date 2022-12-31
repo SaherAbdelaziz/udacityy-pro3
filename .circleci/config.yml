@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: docker:20.10.7
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            docker --version # print the version for logging
+            docker-compose -f docker-compose-build.yaml build --parallel
+      - run:
+          name: Push Docker image
+          command: |
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+            docker push "$DOCKER_USERNAME"/udagram-api-feed
+            docker push "$DOCKER_USERNAME"/udagram-api-user
+            docker push "$DOCKER_USERNAME"/reverseproxy
+            docker push "$DOCKER_USERNAME"/udagram-frontend
