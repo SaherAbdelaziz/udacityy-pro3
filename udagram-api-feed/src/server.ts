@@ -13,7 +13,10 @@ require('dotenv').config();
 (async () => {
   await sequelize.addModels(V0_FEED_MODELS);
 
+  console.log( `hello` );
   console.debug("Initialize database connection...");
+  console.log( `name from config ${config.username}` );
+  console.log( `pass from config ${config.password}` );
   await sequelize.sync();
 
   const app = express();
