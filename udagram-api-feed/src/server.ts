@@ -17,6 +17,7 @@ require('dotenv').config();
   console.debug("Initialize database connection...");
   console.log( `name from config ${config.username}` );
   console.log( `pass from config ${config.password}` );
+  console.log( `aws_media_bucket from config ${config.aws_media_bucket}` );
   await sequelize.sync();
 
   const app = express();
