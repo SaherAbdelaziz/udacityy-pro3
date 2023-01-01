@@ -15,8 +15,8 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: saherabdelaziz/reverseproxy
-        name: reverseproxy
+      - image: saherabdelaziz/udagram-reverseproxy:v2
+        name: reverseproxyv1
         imagePullPolicy: Always         
         ports:
         - containerPort: 8080

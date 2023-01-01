@@ -15,7 +15,7 @@ spec:
         service: backend-user
     spec:
       containers:
-      - image: saherabdelaziz/udagram-api-user
+      - image: saherabdelaziz/udagram-api-user:v2
         name: backend-user
         imagePullPolicy: Always  
         resources:
@@ -70,5 +70,5 @@ spec:
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRES_USERNAME    
+              key: POSTGRES_USERNAME
       restartPolicy: Always

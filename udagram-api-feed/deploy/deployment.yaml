@@ -5,7 +5,7 @@ metadata:
     service: backend-feed
   name: backend-feed
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       service: backend-feed
@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: saherabdelaziz/udagram-api-feed
+      - image: saherabdelaziz/udagram-api-feed:v2
         name: backend-feed
         imagePullPolicy: Always  
         resources:
@@ -70,13 +70,5 @@ spec:
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRES_USERNAME      
-        volumeMounts:
-        - name: aws-secret
-          mountPath: "/root/.aws/"
-          readOnly: true        
+              key: POSTGRES_USERNAME
       restartPolicy: Always
-      volumes:
-      - name: aws-secret
-        secret:
-          secretName: aws-secret
