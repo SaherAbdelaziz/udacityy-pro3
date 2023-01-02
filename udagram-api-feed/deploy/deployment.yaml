@@ -25,16 +25,6 @@ spec:
           limits:
             memory: "4024Mi"
             cpu: "250m"
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8080
-          initialDelaySeconds: 3
-        livenessProbe:
-          httpGet:
-            path: /api/v0/health
-            port: 8080
-          initialDelaySeconds: 3
         env:
         - name: URL
           valueFrom:
