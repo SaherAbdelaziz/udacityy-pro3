@@ -1,3 +1,10 @@
+
+you can use 
+http://a9a1caa56175c45929de0135753866ac-449771061.us-east-1.elb.amazonaws.com/ 
+ 
+userName : test@test.gmail.com
+pass : test
+
 # Udagram Image Filtering Application
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Developer Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
