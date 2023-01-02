@@ -18,6 +18,7 @@ require('dotenv').config();
   console.log( `name from config ${config.username}` );
   console.log( `pass from config ${config.password}` );
   console.log( `aws_media_bucket from config ${config.aws_media_bucket}` );
+  console.log( `testttt` );
   await sequelize.sync();
 
   const app = express();
