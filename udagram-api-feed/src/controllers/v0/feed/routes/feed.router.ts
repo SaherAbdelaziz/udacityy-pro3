@@ -37,6 +37,12 @@ router.get('/signed-url/:fileName',
     });
 
 // Get all feed items
+router.get('/health', async (req: Request, res: Response) => {
+  console.debug("dsdsdsds");
+  res.status(200).send("ok");
+});
+
+// Get all feed items
 router.get('/', async (req: Request, res: Response) => {
   const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
   items.rows.map((item) => {
